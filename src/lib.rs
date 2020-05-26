@@ -36,6 +36,8 @@ mod conversions;
 mod wand;
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
+extern crate imagemagick_sys;
+
 pub use bindings::{
     ColorspaceType, CompositeOperator, DitherMethod, FilterType, GravityType, MetricType,
 };
