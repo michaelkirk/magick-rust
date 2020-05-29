@@ -1,0 +1,17 @@
+on: push
+name: Tests
+jobs:
+  macos-from-source:
+    name: macOS build from source
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: brew install pkg-config
+      - run: cargo test -vv
+  macos-link-existing:
+    name: macOS link w/ existing
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: brew install pkg-config imagemagick
+      - run: cargo test -vv
