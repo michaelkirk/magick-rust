@@ -12,7 +12,8 @@ build = "build.rs"
 
 [dependencies]
 libc = "0.2.70"
-imagemagick-sys = { version = "0.1", git = "https://github.com/michaelkirk/imagemagick-sys" }
+imagemagick-sys = { version = "0.1", git = "https://github.com/michaelkirk/imagemagick-sys", branch = "mkirk/ubuntu" }
+#imagemagick-sys = { version = "0.1", path = "../imagemagick-sys" }
 
 [build-dependencies]
 bindgen = "0.53.2"
